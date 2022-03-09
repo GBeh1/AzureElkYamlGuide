@@ -2,7 +2,7 @@ This folder is reserved for Ansible Setup and Playbooks for Virtual Machine Conf
 
 Files configured:
 
-- ansible.cfg <> Used for configuration management, application deployment, task automation and orchrestrating IT tasks
+- ansible.cfg <> Used for configuration management, application deployment, task automation and orchrestrating IT tasks.
 
 - hosts file <> Tells ansible where devices are that you need to automate through a python interpreter.
 
