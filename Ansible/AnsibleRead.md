@@ -1,6 +1,6 @@
 This folder is reserved for Ansible Setup and Playbooks for Virtual Machine Configurations for Azure.
 
-Files configured:
+Files configured:>
 
 - ansible.cfg <> Used for configuration management, application deployment, task automation and orchrestrating IT tasks.
 
