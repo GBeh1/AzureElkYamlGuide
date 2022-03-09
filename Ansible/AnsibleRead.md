@@ -2,24 +2,14 @@ This folder is reserved for Ansible Setup and Playbooks for Virtual Machine Conf
 
 Files configured:
 
-- ansible.cfg
+- ansible.cfg <> Used for configuration management, application deployment, task automation and orchrestrating IT tasks
 
-- hosts.cfg
+- hosts file <> Tells ansible where devices are that you need to automate through a python interpreter.
 
-- configurewebvm.yml <> Configures Web Virtual Machines by using docker.  
-		        Installs Docker.io - 
-                        Installs Python3-pip - 
-                        Installs Docker Python Module -
-			Downloads and Launches Docker Web Container - 
-			Enables Docker Service
+- configurewebvm.yml <> Configures Web Virtual Machines by using docker. 
 
 - ElkDocker.yml      <>	Configures Elk Virtual Machine by using docker.	
-			Installs Docker.io - 
-			Installs Python3-pip - 
-			Installs Docker Python Module -  
-			Download and Launches Docker Elk Container - 
-			Enables Service Docker on Boot
 
-- Filebeat.yml       <> Download and Installs Filebeat for ELK
+- Filebeat.yml       <> Download and Installs Filebeat for ELK.
 
-- Metricbeat.yml     <> Download and Installs Metricbeat for Elk
+- Metricbeat.yml     <> Download and Installs Metricbeat for Elk.
