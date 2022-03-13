@@ -35,17 +35,17 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 
 | Name     | Function | IP Address | Operating System |
 |----------|----------|------------|------------------|
-| Jump Box | Gateway  | 10.0.0.1   | Linux            |
-| Web-1    |          |            |                  |
-| Web-2    |          |            |                  |
-| ELK     |          |            |                  |
+| Jump Box | Gateway  | 10.0.0.4   | Linux-Ubuntu     |
+| Web-1    |   DVWA   | 10.0.0.5   | Linux-Ubuntu     |
+| Web-2    |   DVWA   | 10.0.0.6   | Linux-Ubuntu     |
+| ELK      | ELK STACK| 10.1.0.4   | Linux-Ubuntu     |
 
 ### Access Policies
 
 The machines on the internal network are not exposed to the public Internet. 
 
-Only the _____ machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
-- _TODO: Add whitelisted IP addresses_
+Only the Jumpbox machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
+- #### When configuring your Azure to connect to jumpbox, your machines public ip will be used to connect.
 
 Machines within the network can only be accessed by _____.
 - _TODO: Which machine did you allow to access your ELK VM? What was its IP address?_
