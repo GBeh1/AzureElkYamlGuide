@@ -2,7 +2,7 @@
 
 The files in this repository were used to configure the network depicted below.
 
-![Project 1-S](https://user-images.githubusercontent.com/101228655/158072729-59b3aac7-b1ae-49a9-9272-d9dd2711f131.png))
+![Project 1-S](https://user-images.githubusercontent.com/101228655/158072729-59b3aac7-b1ae-49a9-9272-d9dd2711f131.png)
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, the configurations may be updated to reflect changes that support future ELK deployments.
 
@@ -53,11 +53,11 @@ A summary of the access policies in place can be found in the table below.
 
 Network Security Groups were set in place to allow public access to Jumpbox through username and ssh-key.  Jumpbox Container was given  access to Web1-2 and ELK machine and excludes all public access.
 
-| Name     | Publicly Accessible | Allowed IP Addresses       |
-|----------|---------------------|----------------------------|
-| Jump Box | Yes                 | Public IP                  |
-| WEB-1&2  | No                  | JumpBox Container 10.0.0.4 |
-| ELK      | No                  | Jumpbox Container 10.0.0.4 |
+| Name     | Publicly Accessible | Allowed IP Addresses        |
+|----------|---------------------|-----------------------------|
+| Jump Box | Yes                 | Public IP                   |
+| WEB-1&2  | No                  | 10.0.0.4 – DVWA (Port 80)   |
+| ELK      | No                  | 10.0.0.4 – Kibana(Port 5601)|
 
 ### Elk Configuration
 
@@ -67,11 +67,16 @@ Ansible was used to automate configuration of the ELK machine. No configuration 
 - Written in Python: One of the most popular programming languages and is familiar to engineers.
 
 The playbook implements the following tasks:
-- _TODO: In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._
-- ...
-- ...
+
+- Install docker.io, python3-pip, python module:
+![Docker](https://user-images.githubusercontent.com/101228655/158076518-a1025eca-1aeb-4c0d-8790-1fb092881e6c.JPG)
+- Memory Requirements:
+![Memory](https://user-images.githubusercontent.com/101228655/158076531-0273bc72-c5af-499c-a78e-330800aa7d77.JPG)
+- Container image and published ports accessible through the network bridge:
+![ports](https://user-images.githubusercontent.com/101228655/158076546-80c98f36-5d7c-4c0a-9c2b-5c5eb3273343.JPG)
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
+![Elk Server](https://user-images.githubusercontent.com/101228655/158076563-ca91a02f-0911-431b-9c68-23583ddaaf5f.JPG)
 
 ![TODO: Update the path with the name of your screenshot of docker ps output](Images/docker_ps_output.png)
 
