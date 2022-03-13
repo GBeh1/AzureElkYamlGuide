@@ -69,15 +69,19 @@ Ansible was used to automate configuration of the ELK machine. No configuration 
 The playbook implements the following tasks:
 
 - Install docker.io, python3-pip, python module:
+
 ![Docker](https://user-images.githubusercontent.com/101228655/158076518-a1025eca-1aeb-4c0d-8790-1fb092881e6c.JPG)
 
 - Memory Requirements:
+
 ![Memory](https://user-images.githubusercontent.com/101228655/158076531-0273bc72-c5af-499c-a78e-330800aa7d77.JPG)
 
 - Container image and published ports accessible through the network bridge:
+
 ![ports](https://user-images.githubusercontent.com/101228655/158076546-80c98f36-5d7c-4c0a-9c2b-5c5eb3273343.JPG)
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
+
 ![Elk Server](https://user-images.githubusercontent.com/101228655/158076563-ca91a02f-0911-431b-9c68-23583ddaaf5f.JPG)
 
 ### Target Machines & Beats
