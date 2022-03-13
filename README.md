@@ -2,7 +2,7 @@
 
 The files in this repository were used to configure the network depicted below.
 
-![Project 1-S](https://user-images.githubusercontent.com/101228655/158068105-f87adc64-dae1-4578-9177-1d3753836bce.png)
+![Project 1-S](https://user-images.githubusercontent.com/101228655/158072729-59b3aac7-b1ae-49a9-9272-d9dd2711f131.png))
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, the configurations may be updated to reflect changes that support future ELK deployments.
 
