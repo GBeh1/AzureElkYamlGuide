@@ -1,14 +1,12 @@
-# AzureElkYamlGuide
-Project 1 Guide
-## Automated ELK Stack Deployment
+## Automated AZURE/ELK Stack Deployment
 
 The files in this repository were used to configure the network depicted below.
 
 ![Project 1-S](https://user-images.githubusercontent.com/101228655/158068105-f87adc64-dae1-4578-9177-1d3753836bce.png)
 
-These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the _____ file may be used to install only certain pieces of it, such as Filebeat.
+These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, the configurations may be updated to reflect changes that support future ELK deployments.
 
-  - _TODO: Enter the playbook file._
+https://github.com/GBeh1/AzureElkYamlGuide/tree/main/Ansible
 
 This document contains the following details:
 - Description of the Topologu
