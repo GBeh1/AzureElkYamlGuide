@@ -45,23 +45,26 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 The machines on the internal network are not exposed to the public Internet. 
 
 Only the Jumpbox machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
-- #### When configuring your Azure to connect to jumpbox, your machines public ip will be used to connect.
-
-Machines within the network can only be accessed by _____.
-- _TODO: Which machine did you allow to access your ELK VM? What was its IP address?_
+- #### When configuring your Azure to connect to jumpbox, your machines public ip will be used to connect via port 22.
+- #### Web Machines within the network can only be accessed by the Jumpbox’s container SSH Key via port 22.
+- #### ELK Machine can only be accessed via Jumpbox’s container’s SSH Key via port 22.
 
 A summary of the access policies in place can be found in the table below.
 
-| Name     | Publicly Accessible | Allowed IP Addresses |
-|----------|---------------------|----------------------|
-| Jump Box | Yes/No              | 10.0.0.1 10.0.0.2    |
-|          |                     |                      |
-|          |                     |                      |
+Network Security Groups were set in place to allow public access to Jumpbox through username and ssh-key.  Jumpbox Container was given  access to Web1-2 and ELK machine and excludes all public access.
+
+| Name     | Publicly Accessible | Allowed IP Addresses       |
+|----------|---------------------|----------------------------|
+| Jump Box | Yes                 | Public IP                  |
+| WEB-1&2  | No                  | JumpBox Container 10.0.0.4 |
+| ELK      | No                  | Jumpbox Container 10.0.0.4 |
 
 ### Elk Configuration
 
-Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
-- _TODO: What is the main advantage of automating configuration with Ansible?_
+Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because it saves time when install packages or configuring a large number of servers.
+- It is agentless: You do not need to install additional software on your server nodes. Makes installation clean while ensuring there are no conflicts with software.
+- Playbooks are easy to read and edit: Written in YAML format, makes adding and editing configurations a simple task.
+- Written in Python: One of the most popular programming languages and is familiar to engineers.
 
 The playbook implements the following tasks:
 - _TODO: In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._
