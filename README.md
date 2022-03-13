@@ -6,7 +6,7 @@ The files in this repository were used to configure the network depicted below.
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, the configurations may be updated to reflect changes that support future ELK deployments.
 
-https://github.com/GBeh1/AzureElkYamlGuide/tree/main/Ansible
+Ansible Playbooks
 
 This document contains the following details:
 - Description of the Topologu
