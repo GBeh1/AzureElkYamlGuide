@@ -4,7 +4,7 @@ Project 1 Guide
 
 The files in this repository were used to configure the network depicted below.
 
-
+![Project 1-S](https://user-images.githubusercontent.com/101228655/158068105-f87adc64-dae1-4578-9177-1d3753836bce.png)
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the _____ file may be used to install only certain pieces of it, such as Filebeat.
 
