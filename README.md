@@ -27,8 +27,6 @@ Load Balancers help servers move data efficiently, optimizes the use of applicat
 - The Jumpbox Server performs as a bridge for Virtual Machines (VM) connected to load-balancers, by connecting the public (IP) of the jumpbox to servers outside of the cloud.  
 
 Integrating an ELK server allows users to monitor for CPU usage, memory usage, network traffic over routers and switches, and application performances.
-- Filebeat monitors the log files or locations specified, collects log events, and forwards them to Elasticsearch or Logstash.  
-- Metricbeat monitors servers by collecting metrics from the system and services running on the server.
 
 The configuration details of each machine may be found below.
 _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
@@ -86,13 +84,22 @@ The following screenshot displays the result of running `docker ps` after succes
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
-- _TODO: List the IP addresses of the machines you are monitoring_
+- Web Machines
+  - Web-1 10.0.0.5
+  - Web-2 10.0.0.6
 
 We have installed the following Beats on these machines:
-- _TODO: Specify which Beats you successfully installed_
+- Filebeat
+- Metricbeat
 
 These Beats allow us to collect the following information from each machine:
-- _TODO: In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., `Winlogbeat` collects Windows logs, which we use to track user logon events, etc._
+- Filebeat monitors the log files or locations specified, collects log events, and forwards them to Elasticsearch or Logstash.
+
+![Filebeat](https://user-images.githubusercontent.com/101228655/158077435-f0798df0-4973-47b3-a5e8-4f05f77d30df.JPG)
+
+- Metricbeat monitors servers by collecting metrics from the system and services running on the server.
+
+![Metric](https://user-images.githubusercontent.com/101228655/158077450-2a58f6f4-b698-4531-9190-f4f37fdcdf79.JPG)
 
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
