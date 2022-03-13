@@ -21,7 +21,9 @@ This document contains the following details:
 
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 
-Load Balancers help servers move data efficiently, optimizes the use of application delivery resources and prevents server overloads.  The conduct continuous health checks on servers to ensure they can handle requests. As a security aspect, the ability to off-load defends against denial-of-service (DDoS) attacks by shifting traffic from one server to another. The Jumpbox Server performs as a bridge for Virtual Machines (VM) connected to load-balancers, by connecting the public (IP) of the jumpbox to servers outside of the cloud.  
+Load Balancers help servers move data efficiently, optimizes the use of application delivery resources and prevents server overloads.  The conduct continuous health checks on servers to ensure they can handle requests. 
+
+- As a security aspect, the ability to off-load defends against denial-   of-service (DDoS) attacks by shifting traffic from one server to another. - The Jumpbox Server performs as a bridge for Virtual Machines (VM) connected to load-balancers, by connecting the public (IP) of the jumpbox to servers outside of the cloud.  
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the _____ and system _____.
 - _TODO: What does Filebeat watch for?_
