@@ -105,14 +105,48 @@ These Beats allow us to collect the following information from each machine:
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
 SSH into the control node and follow the steps below:
-- Copy the _____ file to _____.
-- Update the _____ file to include...
-- Run the playbook, and navigate to ____ to check that the installation worked as expected.
+- Copy the filebeat/metricbeat config file to /etc/ansible/files.
+- Update the config file to include public ip of elk server to include port for ELK APP webpage and ELK Listening Port to monitor Web Servers.
+- Run the playbook with Web Machines running and navigate to Kibana – ([ELK Public IP:5601]/app/kibana) and go to System Logs Dashboard and  Docker Metrics to check that the installation worked as expected.
 
-_TODO: Answer the following questions to fill in the blanks:_
-- _Which file is the playbook? Where do you copy it?_
-- _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_
-- _Which URL do you navigate to in order to check that the ELK server is running?
+### Process for running filebeat:
 
-_As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
+##### Download instructions can be found on Kibana App Homepage, Add Log Data, System Logs, DEB Tab
+
+- Configured hosts that will run filebeat. Hosts config file checks for listed hosts in host’s file and retrieves information against those hosts, then uses this information to make connection, login, and execute tasks on remote hosts.
+
+![hosts config](https://user-images.githubusercontent.com/101228655/158081255-8cc0c621-a1ba-4aba-bf02-37c1351bc7d6.JPG)
+
+- List hosts on which server filebeat and metricbeat will run
+
+![Hosts](https://user-images.githubusercontent.com/101228655/158081518-3b9f8054-204d-4998-ab72-ce84fefcd509.JPG)
+
+- Download using curl and install package (DEBIAN used in this instance)
+  - curl -L downloads from the location and allows for redirects
+  - curl -O saves data into a local file without having to use a path
+  - dkpg is a package manager that can install, or build packages
+
+![DownInstall](https://user-images.githubusercontent.com/101228655/158082318-cdd420f7-6454-469e-87f1-ad0764159bfd.JPG)
+
+- Filebeat Configuration from Ansible Container to Webserver that opens ports 5601 and 9200 as well as other functions to gather data. 
+
+[Filebeat Config File](https://github.com/GBeh1/AzureElkYamlGuide/blob/main/Ansible/Filebeat-Config.yml)
+
+![copy](https://user-images.githubusercontent.com/101228655/158082715-b28fd84d-7310-45c0-b3c7-ecfa3213223d.JPG)
+
+- Filebeat modules provide a way to process common log formats  They contain default configurations, Elasticsearch ingest pipeline definitions, and Kibana dashboards to implement and deploy a log monitoring solution.  You can modify configurations in modules.d/system.yml file.
+
+- Filebeat setup command loads the Kibana dashboard.
+
+- Service Filebeat start will start filebeat to begin monitoring.
+
+- Enable service docker starts filebeat service when server starts.
+
+![therest](https://user-images.githubusercontent.com/101228655/158083267-8e580e7f-1872-41e9-a5f0-7764db0f0104.JPG)
+
+### Kibana File Beat Check
+
+![finished](https://user-images.githubusercontent.com/101228655/158083911-8c94cd48-5691-4b91-8f97-2e803d721bf3.JPG)
+
+![finished2](https://user-images.githubusercontent.com/101228655/158083931-4f759aea-f663-4215-a5cd-ccb47b3ba5cc.JPG)
 
