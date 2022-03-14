@@ -3,7 +3,7 @@
 #### ssh-keygen 
 - Secure Socket Shell Tool for creating new authentication key pairs for SSH.  Key pairs are used for automatic logins, single sign-on, and authenticating hosts. rsa - default key file - is based on the difficulty of factoring large numbers.
 
-#### ssh username#ipaddress
+#### ssh username@ipaddress
 - Opens terminal on remote machine from client machine through TCP port 22 or other specified port.
   
 #### curl
