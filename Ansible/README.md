@@ -1,4 +1,4 @@
-This folder is reserved for Ansible Setup and Playbooks for Virtual Machine Configurations for Azure.
+### This folder is reserved for Ansible Setup and Playbooks for Virtual Machine Configurations in Azure.
 
 Files configured:>
 
